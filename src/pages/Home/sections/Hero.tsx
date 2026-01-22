@@ -96,9 +96,10 @@ export default function Hero() {
               <div className="aspect-square rounded-2xl bg-neutral-900 border border-white/10 overflow-hidden">
                 {/* Put your photo at src/assets/profile.jpg */}
                 <img
-                  src="/src/assets/profile.jpg"
+                  src="/profile.jpg"
                   alt="Raaj profile"
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
+                  loading="eager"
                 />
               </div>
               <div className="mt-4">
