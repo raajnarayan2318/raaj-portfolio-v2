@@ -37,7 +37,7 @@ export default function FeaturedWork() {
       </div>
 
       <div className="mt-10 grid gap-5 md:grid-cols-3">
-        {featured.map((p, idx) => (
+        {featured.map((p) => (
           <motion.a
             key={p.title}
             href={p.href}
