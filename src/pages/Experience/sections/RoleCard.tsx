@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import type { Role } from "../../../data/experience";
+import { Link } from "react-router-dom";
 
 export default function RoleCard({ role }: { role: Role }) {
   const [open, setOpen] = useState(false);
@@ -42,18 +43,23 @@ export default function RoleCard({ role }: { role: Role }) {
         animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
         className="overflow-hidden"
       >
-        <div className="mt-6 grid gap-5 md:grid-cols-2">
+       <div className="mt-6 grid gap-5 md:grid-cols-2">
+          {/* Impact */}
           <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
             <div className="text-sm font-medium">Impact</div>
             <ul className="mt-3 space-y-2 text-neutral-300/80">
               {role.impact.map((x) => (
-                <li key={x} className="rounded-xl border border-white/10 bg-black/20 px-3 py-2">
+                <li
+                  key={x}
+                  className="rounded-xl border border-white/10 bg-black/20 px-3 py-2"
+                >
                   {x}
                 </li>
               ))}
             </ul>
           </div>
 
+          {/* Stack */}
           <div className="rounded-2xl border border-white/10 bg-black/30 p-5">
             <div className="text-sm font-medium">Stack</div>
             <div className="mt-3 flex flex-wrap gap-2">
@@ -68,6 +74,24 @@ export default function RoleCard({ role }: { role: Role }) {
             </div>
           </div>
         </div>
+
+        {/* Related case studies */}
+        {role.caseStudies && (
+          <div className="mt-6 rounded-2xl border border-white/10 bg-black/30 p-5">
+            <div className="text-sm font-medium">Related case studies</div>
+            <div className="mt-3 flex flex-wrap gap-3">
+              {role.caseStudies.map((cs) => (
+                <Link
+                  key={cs.slug}
+                  to={`/case-studies/${cs.slug}`}
+                  className="rounded-full border border-white/10 bg-black/20 px-4 py-2 text-sm text-cyan-300 hover:bg-white/10 hover:text-cyan-200 transition"
+                >
+                  {cs.label} →
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
       </motion.div>
     </motion.div>
   );

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Typewriter from "../../../components/ui/Typewriter";
 
 export default function Hero() {
   return (
@@ -19,7 +20,7 @@ export default function Hero() {
               transition={{ duration: 0.6 }}
               className="text-sm tracking-widest text-neutral-300/80"
             >
-              DATA • ANALYTICS • AI AUTOMATION
+              DATA ENGINEERING • ANALYTICS • AI-ASSITED SYSTEMS
             </motion.p>
 
             <motion.h1
@@ -30,9 +31,11 @@ export default function Hero() {
             >
               Hi, I’m{" "}
               <span className="relative inline-block">
-                <span className="name-glow">Raaj Narayan Rao Thipparthy</span>
+                <Typewriter
+                  text="Raaj Thipparthy."
+                  className="name-glow"
+                />
               </span>
-              .
             </motion.h1>
 
             <motion.p
@@ -77,14 +80,21 @@ export default function Hero() {
 
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-3">
               {[
-                { k: "Pipelines", v: "Automation-first" },
-                { k: "Dashboards", v: "Exec-ready KPIs" },
-                { k: "AI Workflows", v: "LLM-assisted systems" },
-                { k: "Data Quality", v: "Trust & governance" },
+                { k: "Production Data Pipelines", v: "Batch & streaming, Automated, Monitored" },
+                { k: "Analytics & BI Systems", v: "Decision-ready dashboards & KPIs" },
+                { k: "AI-Enabled Workflows", v: "LLMs, Document processing, Automation" },
+                { k: "Data Reliability", v: "Validation, Governance, and Trust" },
               ].map((x) => (
-                <div key={x.k} className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-                  <div className="text-sm text-neutral-300/80">{x.k}</div>
-                  <div className="mt-1 font-medium">{x.v}</div>
+                <div
+                  key={x.k}
+                  className="min-h-[110px] rounded-2xl border border-white/10 bg-white/5 p-5 md:p-6 backdrop-blur"
+                >
+                  <div className="text-sm font-semibold leading-snug text-neutral-100">
+                    {x.k}
+                  </div>
+                  <div className="mt-2 text-sm leading-relaxed text-neutral-300/80">
+                    {x.v}
+                  </div>
                 </div>
               ))}
             </div>

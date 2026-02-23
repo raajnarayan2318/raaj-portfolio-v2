@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { caseStudies } from "../../data/caseStudies";
+import ArchitectureFlow from "./sections/ArchitectureFlow";
 
 export default function CaseStudyDetail() {
   const { slug } = useParams();
@@ -70,13 +71,66 @@ export default function CaseStudyDetail() {
         </div>
       </section>
 
+      {project.problem && (
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h2 className="text-2xl font-semibold">Problem</h2>
+          <p className="mt-4 text-neutral-300/80 leading-relaxed">
+            {project.problem}
+          </p>
+        </section>
+      )}
+
+      {project.context && (
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h2 className="text-2xl font-semibold">Context & Constraints</h2>
+          <ul className="mt-4 space-y-3 text-neutral-300/80">
+            {project.context.map((c) => (
+              <li key={c} className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3">
+                {c}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {project.approach && (
+        <section className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8">
+          <h2 className="text-2xl font-semibold">Approach</h2>
+          <ul className="mt-4 space-y-3 text-neutral-300/80">
+            {project.approach.map((a) => (
+              <li key={a} className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3">
+                {a}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {project.impact && (
+        <section className="mt-12 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8">
+          <h2 className="text-2xl font-semibold">Impact</h2>
+          <ul className="mt-4 space-y-3 text-neutral-300/80">
+            {project.impact.map((i) => (
+              <li key={i} className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3">
+                {i}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
       {/* Later we add: Architecture, Diagrams, Screenshots */}
-      <section className="mt-12 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8">
-        <h2 className="text-2xl font-semibold">Architecture (next)</h2>
-        <p className="mt-3 text-neutral-300/80">
-          Next we’ll add a clean architecture diagram section + flow visualization (data pipeline style).
-        </p>
-      </section>
+      {project.architecture && (
+        <section className="mt-12 rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8">
+          <h2 className="text-2xl font-semibold">Architecture</h2>
+          <p className="mt-3 text-neutral-300/80">
+            High-level flow of the system and how data moves from requirements to
+            standardized datasets.
+          </p>
+
+          <ArchitectureFlow steps={project.architecture} />
+        </section>
+      )}
     </div>
   );
 }

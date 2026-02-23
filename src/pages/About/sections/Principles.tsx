@@ -3,20 +3,20 @@ import { motion } from "framer-motion";
 export default function Principles() {
   const principles = [
     {
-      title: "Make it observable",
-      desc: "If it breaks silently, it will break often. Monitoring is part of the product.",
+      title: "Make systems observable",
+      desc: "If a pipeline fails silently, it will fail often. Monitoring and alerts are part of the product.",
     },
     {
-      title: "Build for scale early",
-      desc: "A good pipeline handles today’s volume AND tomorrow’s growth with minimal redesign.",
+      title: "Design for scale early",
+      desc: "Well-designed data systems handle today’s volume and tomorrow’s growth with minimal rework.",
     },
     {
       title: "Optimize for decisions",
-      desc: "Dashboards aren’t visuals—they’re a decision engine. Every chart must answer a question.",
+      desc: "Dashboards are not visuals, they are decision tools. Every metric must answer a question.",
     },
     {
-      title: "Automate the boring",
-      desc: "Manual data work is a tax. Automation unlocks creativity and higher-value work.",
+      title: "Automate repetitive work",
+      desc: "Manual data work slows teams down. Automation unlocks reliability and higher-value problem solving.",
     },
   ];
 

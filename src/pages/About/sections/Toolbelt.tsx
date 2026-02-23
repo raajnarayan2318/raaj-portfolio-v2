@@ -1,9 +1,54 @@
 import { motion } from "framer-motion";
 
 const skills = [
-  "Python", "SQL", "AWS", "ETL", "Data Modeling", "Power BI",
-  "Tableau", "Spark", "Postgres", "Redshift", "Git", "Automation",
-  "APIs", "Data Quality", "LLM Workflows"
+    // Programming & Querying
+    "Python (Pandas, NumPy, Scikit-Learn)",
+    "SQL (CTEs, Window Functions, Optimization)",
+    "PySpark",
+    "VBA",
+
+    // Data Engineering & ETL
+    "ETL / ELT Pipeline Design",
+    "Python ETL Pipelines",
+    "Apache Airflow",
+    "Azure Data Factory (ADF)",
+    "SSIS",
+    "API Data Ingestion",
+    "Web Scraping (Selenium, REST APIs)",
+    "Automation Frameworks",
+
+    // Data Modeling & Warehousing
+    "Data Modeling",
+    "Data Warehousing",
+    "PostgreSQL",
+    "MySQL",
+    "Redshift",
+    "Snowflake",
+
+    // Analytics & BI
+    "Power BI (DAX, Dataflows, Power Query)",
+    "Tableau",
+    "Excel (Power Pivot, VBA)",
+    "Azure Data Explorer (Kusto)",
+    "KPI Dashboarding",
+    "Executive Reporting",
+
+    // Analytics & Data Competencies
+    "Data Cleaning & Transformation",
+    "Data Quality & Governance",
+    "A/B Testing",
+    "Cohort & Funnel Analysis",
+    "Product Analytics",
+    "User Behavior Analysis",
+    "GTM & Revenue Analytics",
+    "Statistical Analysis",
+    "Workflow Optimization",
+
+    // Cloud & Platforms
+    "AWS (S3, Lambda, Redshift)",
+    "Azure Data Services",
+    "Git",
+    "Power Automate",
 ];
 
 export default function Toolbelt() {

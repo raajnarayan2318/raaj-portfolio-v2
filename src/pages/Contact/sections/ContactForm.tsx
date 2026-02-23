@@ -28,30 +28,37 @@ export default function ContactForm() {
 
         <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
           <h3 className="text-xl font-semibold">Send a message</h3>
-          <p className="mt-2 text-neutral-300/80 text-sm">
-            This form is currently UI only. We can connect it to AWS later.
-          </p>
 
           <form
             className="mt-6 space-y-4"
-            onSubmit={(e) => {
-              e.preventDefault();
-              setStatus("sent");
-            }}
+            action="https://formspree.io/f/xbdapqbl"
+            method="POST"
+            onSubmit={() => setStatus("sent")}
           >
             <input
               required
+              name="name"
               placeholder="Your name"
               className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none focus:border-white/30"
             />
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="New message from portfolio"
+            />
+
             <input
               required
               type="email"
+              name="email"
               placeholder="Email"
               className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none focus:border-white/30"
             />
+
             <textarea
               required
+              name="message"
               placeholder="Message"
               rows={5}
               className="w-full rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-sm outline-none focus:border-white/30 resize-none"

@@ -5,26 +5,45 @@ export default function ValueBlocks() {
           <div className="rounded-3xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-8">
             <p className="text-sm tracking-widest text-neutral-300/80">MY APPROACH</p>
             <h2 className="mt-3 text-2xl md:text-3xl font-semibold">
-              Data that earns trust.
+            Complex Data to Decision-Ready Systems.
             </h2>
             <p className="mt-4 text-neutral-300/80 leading-relaxed">
-              My style is simple: automate ingestion, validate aggressively, monitor continuously,
-              and surface insights in a way that is fast to interpret.
+              I design data systems with reliability and automation as first-class concerns,
+              starting from ingestion and validation through monitoring, analytics, and downstream consumption.
+              My focus is on building pipelines and analytics layers that teams can trust,
+              even as data volume, complexity, and business demands grow.
+            </p>
+
+            <p className="mt-3 text-neutral-300/80 leading-relaxed">
+              Rather than optimizing only for speed, I prioritize correctness, observability,
+              and long-term maintainability. Where it adds real value, I incorporate AI-assisted
+              workflows to reduce manual effort, accelerate insights, and improve operational efficiency
+              without compromising engineering discipline.
             </p>
           </div>
   
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur">
             <p className="text-sm tracking-widest text-neutral-300/80">WHAT I DELIVER</p>
-            <div className="mt-4 grid gap-3">
+            <div className="mt-4 grid gap-4">
               {[
-                "Robust pipelines & ETL automation",
-                "Cleaned / modeled datasets for analytics",
-                "Dashboards: KPIs, trends, drill-downs",
-                "AI workflows to reduce manual work",
+                "End-to-end automated data pipelines (batch & near real-time)",
+                "Modeled datasets designed for analytics and BI consumption",
+                "Decision-ready dashboards with KPIs, trends, and drill-downs",
+                "AI-powered workflows for document processing and automation",
               ].map((x) => (
                 <div
                   key={x}
-                  className="rounded-2xl border border-white/10 bg-black/30 px-4 py-3 text-neutral-200/90"
+                  className="
+                    flex items-center
+                    min-h-[64px]
+                    rounded-2xl
+                    border border-white/10
+                    bg-black/30
+                    px-5
+                    py-4
+                    text-neutral-200/90
+                    leading-relaxed
+                  "
                 >
                   {x}
                 </div>

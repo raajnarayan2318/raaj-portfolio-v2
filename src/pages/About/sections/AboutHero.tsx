@@ -24,9 +24,13 @@ export default function AboutHero() {
           transition={{ duration: 0.65, delay: 0.08 }}
           className="mt-5 text-lg text-neutral-200/80 max-w-3xl"
         >
-          I’m a data-focused builder who enjoys transforming messy information into clean,
-          trusted systems—then turning that into dashboards and AI-powered workflows that
-          make decision-making effortless.
+          I’m a data engineer and analytics practitioner focused on building
+          automation-first, reliable data systems that remove friction between
+          data and decisions.
+
+          My work spans production data pipelines, analytics platforms, and
+          AI-assisted workflows—designed to scale with the business rather than
+          break under it.
         </motion.p>
 
         <motion.div
@@ -36,19 +40,19 @@ export default function AboutHero() {
           className="mt-10 grid gap-4 md:grid-cols-3"
         >
           {[
-            {
-              title: "Engineering mindset",
-              desc: "I design pipelines like products: reliable, scalable, observable.",
-            },
-            {
-              title: "Analytics clarity",
-              desc: "I craft KPI stories that execs can trust and act on immediately.",
-            },
-            {
-              title: "AI enablement",
-              desc: "I integrate automation + LLM workflows to accelerate operations.",
-            },
-          ].map((x) => (
+              {
+                title: "Production Data Engineering",
+                desc: "Designing and operating batch and streaming pipelines with automation, monitoring, and scale in mind.",
+              },
+              {
+                title: "Analytics & Decision Systems",
+                desc: "Building dashboards and KPI layers that translate complex data into business-ready insights.",
+              },
+              {
+                title: "AI-Enabled Automation",
+                desc: "Applying LLMs and intelligent workflows to document processing, scraping, and analytics acceleration.",
+              },
+            ].map((x) => (
             <div
               key={x.title}
               className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur"
