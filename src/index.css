@@ -2,32 +2,61 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+/* ---------- GLOBAL ROOT STYLES (CRITICAL) ---------- */
+html,
+body {
   height: 100%;
-}
-@keyframes marquee {
-  0% { transform: translateX(0%); }
-  100% { transform: translateX(-50%); }
-}
-.btn-primary{
-  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium
-  bg-white text-black hover:bg-neutral-200 transition;
-}
-.btn-secondary{
-  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium
-  border border-white/15 bg-white/5 text-white hover:bg-white/10 transition;
+  background-color: #000000;
+  color: white;
 }
 
-.name-glow{
-  background: linear-gradient(90deg, rgba(34,211,238,1), rgba(59,130,246,1), rgba(168,85,247,1));
+#root {
+  min-height: 100%;
+  background-color: #000000;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- BUTTONS ---------- */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium
+    bg-white text-black hover:bg-neutral-200 transition;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center rounded-2xl px-5 py-3 text-sm font-medium
+    border border-white/15 bg-white/5 text-white hover:bg-white/10 transition;
+}
+
+/* ---------- NAME GLOW ---------- */
+.name-glow {
+  background: linear-gradient(
+    90deg,
+    rgba(34, 211, 238, 1),
+    rgba(59, 130, 246, 1),
+    rgba(168, 85, 247, 1)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 0 24px rgba(34,211,238,0.12);
+  text-shadow: 0 0 24px rgba(34, 211, 238, 0.12);
   animation: shimmer 2.8s ease-in-out infinite;
 }
 
 @keyframes shimmer {
-  0%, 100% { filter: brightness(1); }
-  50% { filter: brightness(1.25); }
+  0%,
+  100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.25);
+  }
 }

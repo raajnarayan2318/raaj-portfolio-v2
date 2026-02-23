@@ -7,6 +7,7 @@ export default function PageTransition({
 }) {
   return (
     <motion.div
+      className="min-h-screen bg-black"
       initial={{ opacity: 0, y: 8 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: -8 }}
