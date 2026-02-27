@@ -6,6 +6,8 @@ import Cursor from "../components/ui/Cursor";
 
 import { routes } from "./routes";
 
+import RaajGPTButton from "../components/ai/RaajGPTButton";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-black text-white">
@@ -19,6 +21,7 @@ export default function App() {
       </Routes>
 
       <Footer />
+      <RaajGPTButton />
     </div>
   );
 }
