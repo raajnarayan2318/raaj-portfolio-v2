@@ -3,10 +3,9 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import Cursor from "../components/ui/Cursor";
+import RaajGPTButton from "../components/ai/RaajGPTButton";
 
 import { routes } from "./routes";
-
-import RaajGPTButton from "../components/ai/RaajGPTButton";
 
 export default function App() {
   return (

@@ -19,6 +19,88 @@ export type CaseStudy = {
   
   export const caseStudies: CaseStudy[] = [
     {
+      slug: "github-open-source-trend-observatory",
+    
+      title: "GitHub Open Source Trend Observatory",
+    
+      category: "Data Engineering",
+    
+      summary:
+        "Built a production-style data pipeline that ingests GitHub event streams, processes them with Spark, stores analytics tables in PostgreSQL, and generates live dashboards showing trends across the open-source ecosystem.",
+    
+      highlights: [
+        "Ingested real-time GitHub activity data from the GitHub Archive dataset",
+        "Processed large JSON event streams using PySpark transformations",
+        "Designed analytical tables to track repository push and pull request activity",
+        "Built automated dashboards to visualize trending repositories and developer activity",
+        "Created a live analytics system that updates dashboards from pipeline outputs",
+      ],
+    
+      stack: [
+        "Python",
+        "PySpark",
+        "GitHub Archive",
+        "PostgreSQL",
+        "Plotly",
+        "Data Engineering Pipelines",
+        "Analytics Modeling",
+        "GitHub Actions",
+      ],
+    
+      github: "https://github.com/raajnarayan2318/raaj-open-source-trend-observatory",
+    
+      demo: "/#/analytics",
+    
+      problem:
+        "Understanding trends in the open-source ecosystem requires analyzing large volumes of developer activity data. However, raw GitHub event streams are difficult to process directly due to their size, structure, and velocity.",
+    
+      context: [
+        "GitHub generates millions of events daily including pushes, pull requests, and repository activity",
+        "Raw event streams are stored as large JSON datasets in the GitHub Archive project",
+        "Extracting insights requires scalable data processing and structured analytics tables",
+        "Goal was to design a pipeline capable of ingesting, transforming, and visualizing this ecosystem activity",
+      ],
+    
+      approach: [
+        "Built an ingestion system that downloads GitHub Archive event data",
+        "Processed raw JSON event streams using PySpark transformations",
+        "Designed analytics tables summarizing repository activity and developer behavior",
+        "Stored structured results in PostgreSQL for querying and dashboard generation",
+        "Generated interactive Plotly dashboards visualizing repository trends and activity patterns",
+      ],
+    
+      impact: [
+        "Demonstrates a full modern data engineering workflow from ingestion to analytics",
+        "Processes large-scale developer event streams using distributed data processing",
+        "Transforms raw events into structured analytics tables",
+        "Produces live dashboards that showcase open-source ecosystem activity",
+        "Serves as a production-style portfolio project for data engineering and analytics roles",
+      ],
+    
+      architecture: [
+        {
+          title: "Data Source",
+          desc: "GitHub Archive provides hourly event streams capturing developer activity across GitHub repositories.",
+        },
+        {
+          title: "Ingestion Pipeline",
+          desc: "Python ingestion scripts download event data and store raw JSON files locally for processing.",
+        },
+        {
+          title: "Distributed Processing",
+          desc: "PySpark processes large event streams to extract repository activity metrics and developer actions.",
+        },
+        {
+          title: "Analytics Warehouse",
+          desc: "Processed data is stored in PostgreSQL tables optimized for analytical queries.",
+        },
+        {
+          title: "Visualization Layer",
+          desc: "Plotly dashboards visualize trending repositories, push activity, and pull request patterns.",
+        },
+      ],
+    },
+    {
       slug: "automated-data-pipeline-analytics-platform",
       title: "End-to-End Automated Data Pipeline & Analytics Platform",
       summary:

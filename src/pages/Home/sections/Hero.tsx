@@ -103,15 +103,14 @@ export default function Hero() {
           {/* Profile card */}
           <div className="relative">
             <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur">
-              <div className="aspect-square rounded-2xl bg-neutral-900 border border-white/10 overflow-hidden">
-                {/* Put your photo at src/assets/profile.jpg */}
-                <img
-                  src="/profile.jpg"
-                  alt="Raaj profile"
-                  className="h-full w-full object-cover object-center"
-                  loading="eager"
-                />
-              </div>
+            <div className="aspect-square rounded-2xl bg-neutral-900 border border-white/10 overflow-hidden">
+              <img
+                src={`${import.meta.env.BASE_URL}profile.jpg`}
+                alt="Raaj profile"
+                className="h-full w-full object-cover object-center"
+                loading="eager"
+              />
+            </div>
               <div className="mt-4">
                 <div className="text-sm text-neutral-300/80">Focus</div>
                 <div className="mt-1 font-medium">

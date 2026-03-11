@@ -64,7 +64,7 @@ export default function CaseStudyDetail() {
             )}
             {project.demo && (
               <a className="btn-primary" href={project.demo} target="_blank" rel="noreferrer">
-                Live demo
+                Launch
               </a>
             )}
           </div>
