@@ -19,7 +19,7 @@ export default function Analytics() {
           </h2>
 
           <iframe
-            src="raaj-portfolio-v2/analytics/top_repositories.html"
+            src="./analytics/top_repositories.html"
             className="w-full h-[600px] border border-white/10 rounded-xl"
           />
         </div>
@@ -30,7 +30,7 @@ export default function Analytics() {
           </h2>
 
           <iframe
-            src="raaj-portfolio-v2/analytics/push_activity.html"
+            src="./analytics/push_activity.html"
             className="w-full h-[600px] border border-white/10 rounded-xl"
           />
         </div>
@@ -41,7 +41,7 @@ export default function Analytics() {
           </h2>
 
           <iframe
-            src="raaj-portfolio-v2/analytics/pr_activity.html"
+            src="./analytics/pr_activity.html"
             className="w-full h-[600px] border border-white/10 rounded-xl"
           />
         </div>
